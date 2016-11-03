@@ -62,7 +62,6 @@ $(function(){
 //      todo.splice(m,1)
          todo.splice(m,n)
         localStorage.x=JSON.stringify(todo);
-        
     });
 //  $(".delete").on("touchend",function(){
 //      var li=$(this).closest("li")

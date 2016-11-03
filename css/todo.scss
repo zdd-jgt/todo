@@ -38,9 +38,9 @@ $d-size:750px;
 //  height: 0;
     width: 100%;
     height: 667px;
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: .4rem;
+    top: 0;
     background:url(../img/762259.png);
     background-size: cover;
     z-index: 10;
@@ -111,7 +111,7 @@ transition: all 1s linear;
     background: red;
     border-radius: 50%;
     margin: {
-        top: 160px;
+        top: 185px;
         left: 242px;
     };
 }
@@ -204,7 +204,7 @@ li.done{
 .footer{
     position: fixed;
     left: 0;
-    top: 34px;
+    top: 0;
     width: 100%;
     height:1rem;
     text-align: center;
@@ -226,18 +226,18 @@ li.done{
     }
 }
 //ding
-.ding{
-    width: 100%;
-    height: .4rem;
-    background: url(../img/ding.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 3px;
-}
+//.ding{
+//  width: 100%;
+//  height: .4rem;
+//  background: url(../img/ding.png);
+//  background-repeat: no-repeat;
+//  background-size: cover;
+//  background-position: 0 3px;
+//}
 .yemian{
     width: 100%;
     height: 667px;
-    position: absolute;
+    position: fixed;
     left: 0;
     top:0;
     z-index: 10;

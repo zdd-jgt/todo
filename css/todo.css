@@ -1,0 +1,291 @@
+@charset "UTF-8";
+html {
+  font-size: 100px;
+}
+
+body {
+  background: url(../img/95a76179ba84e3774b5e3528880d5796bab6439231267-HiFvBS_fw658.jpg) fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 42.66667px;
+  }
+}
+
+@media screen and (min-width: 360px) {
+  html {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  html {
+    font-size: 50px;
+  }
+}
+
+@media screen and (min-width: 412px) {
+  html {
+    font-size: 54.93333px;
+  }
+}
+
+@media screen and (min-width: 414px) {
+  html {
+    font-size: 55.2px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  height: 667px;
+  position: absolute;
+  left: 0;
+  top: .4rem;
+  background: url(../img/762259.png);
+  background-size: cover;
+  z-index: 10;
+  opacity: 0;
+  transform: rotate(0deg) scale(0);
+  transition: all 1s linear;
+  overflow: hidden;
+}
+
+.header > input {
+  width: 100%;
+  height: .8rem;
+  display: block;
+  outline: none;
+  color: #fff;
+  line-height: .8rem;
+  background: transparent;
+  border: 0;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-left: 15px;
+}
+
+.header .anniu {
+  font-family: "微软雅黑";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  font-size: 30px;
+  color: #fff;
+  line-height: .5rem;
+  text-align: center;
+  font-weight: 700;
+  right: 0;
+  margin-right: 10px;
+}
+
+.header .tuichu {
+  position: absolute;
+  left: 182px;
+  top: 153px;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  transition: all 1s linear;
+}
+
+.tuichu_active {
+  transform: rotate(720deg) scale(1);
+  opacity: 1;
+}
+
+.header1 {
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  position: relative;
+  background: red;
+  border-radius: 50%;
+  margin-top: 160px;
+  margin-left: 242px;
+}
+
+.ul {
+  margin-top: 40px;
+}
+
+.ul li {
+  width: 7rem;
+  margin: 0 auto;
+  height: 1rem;
+  line-height: .6rem;
+  border: 1px solid #ECECEC;
+  position: relative;
+  background: rgba(255, 255, 255, 0.3);
+  margin-bottom: 10px;
+}
+
+.ul li .content {
+  line-height: 1rem;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  padding-left: 10px;
+}
+
+.ul li .delete {
+  display: none;
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  line-height: .5rem;
+  text-align: center;
+  font-size: 20px;
+  font-family: "微软雅黑";
+  color: #fff;
+  margin-right: 10px;
+}
+
+.ul li:last-child {
+  border: 1px solid #ECECEC;
+  border-radius: 0 0 10px 10px;
+}
+
+.ul li:first-child {
+  border: 1px solid #ECECEC;
+  border-radius: 10px 10px 0 0;
+}
+
+li.done .content {
+  text-decoration: line-through;
+  color: red;
+}
+
+li.done .delete {
+  display: block;
+  z-index: 8;
+}
+
+.active {
+  animation: del 4s ease both;
+}
+
+@keyframes del {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(150%);
+  }
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  top: 34px;
+  width: 100%;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.footer div {
+  width: 25%;
+  float: left;
+  line-height: .6rem;
+  border-left: 1px dashed #ECECEC;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 700;
+  padding: .2rem;
+}
+
+.footer .all {
+  border-left: 0;
+}
+
+.ding {
+  width: 100%;
+  height: .4rem;
+  background: url(../img/ding.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 3px;
+}
+
+.yemian {
+  width: 100%;
+  height: 667px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  transition: all 1s linear;
+  transform-origin: center bottom;
+  overflow: hidden;
+}
+
+.yemian img {
+  width: 100%;
+}
+
+.yemian .ye_wei {
+  position: absolute;
+  left: 127px;
+  top: 414px;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.2rem;
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.yemian .ye_wei .ye_nei {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-radius: 50%;
+  border: 8px solid rgba(255, 255, 255, 0.3);
+  transition: all 1s linear;
+  padding: 0.2rem;
+}
+
+.yemian .ye_wei .ye_nei .ye_li {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 1s linear;
+}
+
+.ye_hidden {
+  opacity: 0;
+  transform: scale(0);
+  height: 0;
+}

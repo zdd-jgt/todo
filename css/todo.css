@@ -50,17 +50,116 @@ body {
   position: relative;
 }
 
-.header {
+.head {
   width: 100%;
-  height: 100%;
+  height: 1rem;
+  background: #000;
+  padding-left: .2rem;
+  padding-right: .2rem;
+  overflow: hidden;
+}
+
+.head .head_left {
+  width: 1rem;
+  height: 1rem;
+  float: left;
+  background: url(../img/caidan.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: .4rem .4rem;
+}
+
+.head .head_right {
+  width: 1rem;
+  height: 1rem;
+  float: right;
+  background: url(../img/tianjia.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: .5rem .5rem;
+}
+
+.qita {
   position: fixed;
   left: 0;
   top: 0;
-  background: url(../img/762259.png);
-  background-size: cover;
+  width: 80%;
+  height: 100%;
+  background: #fff;
+  transition: all 1s ease;
+  z-index: 20;
+  opacity: 0;
+  transform: translateX(-100%);
+  overflow: hidden;
+}
+
+.qita .qita_head {
+  width: 100%;
+  height: 2.5rem;
+  background: #CCCCCC;
+}
+
+.qita .qita_head h1 {
+  font-size: 20px;
+  float: left;
+  margin-top: .7rem;
+  margin-left: .5rem;
+}
+
+.qita .qita_head h2 {
+  font-size: 16px;
+  float: left;
+  margin-left: .5rem;
+}
+
+.qita .qita_head .qit_left {
+  position: relative;
+  width: 1.5rem;
+  height: 100%;
+  float: left;
+}
+
+.qita .qita_head .qit_left .qita_yuan {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background: #5E5E5E;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.qita div {
+  width: 100%;
+  float: left;
+  line-height: .6rem;
+  border-bottom: 1px dashed #cccccc;
+  cursor: pointer;
+  color: #000;
+  font-weight: 700;
+  padding: .2rem;
+}
+
+.qita .all {
+  border-left: 0;
+}
+
+.qita_active {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.header {
+  width: 100%;
+  height: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url(../img/liuxing.png) fixed;
   z-index: 10;
   opacity: 0;
-  transform: rotate(0deg) scale(0);
+  transform-origin: bottom center;
   transition: all 1s linear;
   overflow: hidden;
 }
@@ -112,19 +211,8 @@ body {
 }
 
 .tuichu_active {
-  transform: rotate(720deg) scale(1);
+  height: 100%;
   opacity: 1;
-}
-
-.header1 {
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
-  position: relative;
-  background: red;
-  border-radius: 50%;
-  margin-top: 185px;
-  margin-left: 242px;
 }
 
 .ul {
@@ -204,32 +292,6 @@ li.done .delete {
   }
 }
 
-.footer {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 1rem;
-  text-align: center;
-  line-height: 1rem;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.footer div {
-  width: 25%;
-  float: left;
-  line-height: .6rem;
-  border-left: 1px dashed #ECECEC;
-  cursor: pointer;
-  color: #fff;
-  font-weight: 700;
-  padding: .2rem;
-}
-
-.footer .all {
-  border-left: 0;
-}
-
 .yemian {
   width: 100%;
   height: 100%;
@@ -237,13 +299,25 @@ li.done .delete {
   left: 0;
   top: 0;
   z-index: 10;
+  background: url(../img/0102f656fd025932f875a94463b5ff.png@900w_1l_2o_100sh.jpg);
+  background-size: cover;
   transition: all 1s linear;
   transform-origin: center bottom;
   overflow: hidden;
 }
 
-.yemian img {
-  width: 100%;
+.yemian h1 {
+  font-size: 52px;
+  text-align: center;
+  color: #fff;
+  word-spacing: 8px;
+  letter-spacing: 40px;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 144px;
+  margin: auto;
 }
 
 .yemian .ye_wei {

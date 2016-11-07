@@ -23,7 +23,7 @@ $(function(){
         localStorage.x=JSON.stringify(todo);
         $("<li><div class='content'>"+v+"</div><div class='delete'>x</div></li>").appendTo(ul);
         input.val("");
-        
+        $(".header").removeClass("tuichu_active");
     });
     
     //划去
@@ -62,31 +62,12 @@ $(function(){
 //      todo.splice(m,1)
          todo.splice(m,n)
         localStorage.x=JSON.stringify(todo);
+        $(".qita").removeClass("qita_active");
     });
-//  $(".delete").on("touchend",function(){
-//      var li=$(this).closest("li")
-//      var index=li.index();
-//      todo.splice(index,1);
-//      localStorage.x=JSON.stringify(todo);
-//   
-//         li.remove();
-//    
-//     
-//  })
-//  $(".delete").on("touchend",function(){
-//      var li=$(this).closest("li")
-//      var index=li.index();
-//      todo.splice(index,1);
-//      console.log(todo)
-//      console.log(index)
-//      li.delay(800).queue(function(){
-//          $(this).remove().dequeue()
-//      });
-//      localStorage.x=JSON.stringify(todo);
-//  })
+
     
     //foot
-    var divs=$(".footer div");
+    var divs=$(".qita div");
     divs.on("touchend",function(){
         ul.find("li").show();
         var role=$(this).attr("data-role");
@@ -94,31 +75,31 @@ $(function(){
             ul.find("li:not(.done)").hide();
         }
         if(role=="rem"){
+            
             ul.find("li.done").hide();
         }
         if(role=="all"){
             ul.find("li").show();
         }
+        $(".qita").removeClass("qita_active");
     })
-    $(".tuichu").on("touchend",function(){
-        $(".header").removeClass("tuichu_active");
-//      $(".header").css({"opacity":"0","height":"0","width":"0"});
-    });
-    $(".header1").on("touchend",function(){
-//      $(".header").css({"opacity":"1","height":"667px","width":"100%"});
-    $(".header").addClass("tuichu_active");
+    
+//  $(".tuichu").on("touchend",function(){
+//      $(".header").removeClass("tuichu_active");
+//  });
+    $(".head_right").on("touchend",function(){
+        $(".header").addClass("tuichu_active");
     })
+
+    $(".head_left").on("touchend",function(){
+        $(".qita").addClass("qita_active");
+    })
+    
+    
+   
     //封面
-//  $(".ye_wei").on("touchstart",function(){
-//      $(this).addClass("ye_active");
-//      $(".ye_nei").addClass("ye_active");
-//      $(".ye_li").addClass("ye_active");
-//      
-//  })
+
     $(".ye_wei").on("touchend",function(){
-//      $(this).removeClass("ye_active");
-//      $(".ye_nei").removeClass("ye_active");
-//      $(".ye_li").removeClass("ye_active");
         $(".yemian").addClass("ye_hidden");
     });
     

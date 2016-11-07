@@ -33,23 +33,120 @@ $d-size:750px;
     box-sizing: border-box;
     position: relative;
 }
-.header{
-//  width:0;
-//  height: 0;
+//head
+.head{
     width: 100%;
-    height: 100%;
+    height: 1rem;
+    background: #000;
+    padding: {
+        left: .2rem;
+        right: .2rem;
+    };
+    overflow: hidden;
+    .head_left{
+        width: 1rem;
+        height: 1rem;
+        float: left;
+        background: url(../img/caidan.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: .4rem .4rem;
+        
+    }
+    .head_right{
+        width: 1rem;
+        height: 1rem;
+        float:right;
+        background: url(../img/tianjia.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: .5rem .5rem;
+//      background: #bfbfbf;
+    }
+}
+.qita{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height:100%;
+    background: #fff;
+    transition: all 1s ease;
+    z-index: 20;
+    opacity: 0;
+    transform: translateX(-100%);
+    overflow: hidden;
+    .qita_head{
+        width: 100%;
+        height: 2.5rem;
+        background: #CCCCCC;
+        h1{
+            font-size: 20px;
+            float: left;
+            margin: {
+                top: .7rem;
+                left: .5rem;
+            };
+            
+        }
+        h2{
+            font-size: 16px;  
+            float: left;
+            margin: {
+                left: .5rem;
+            };
+        }
+        .qit_left{
+             position: relative;
+             width: 1.5rem;
+             height: 100%;
+             float: left;
+            .qita_yuan{
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background: #5E5E5E;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+     div{
+        width: 100%;
+        float: left;
+        line-height:.6rem;
+        border-bottom: 1px dashed #cccccc;
+        cursor: pointer;
+        color: #000;
+        font-weight: 700;
+        padding: .2rem;
+    }
+    .all{
+        border-left: 0;
+    }
+}
+.qita_active{
+    transform: translateX(0);
+    opacity: 1;
+}
+
+
+
+.header{
+    width: 100%;
+    height: 0;
     position: fixed;
     left: 0;
     top: 0;
-    background:url(../img/762259.png);
-    background-size: cover;
+    background:url(../img/liuxing.png) fixed;
+//  background: #000;
+//  background-size: cover;
     z-index: 10;
     opacity: 0;
-    transform: rotate(0deg) scale(0);
-//  border-radius: 50%;
-   transition: all 1s linear;
-//  position: relative;
-//  display: none;
+    transform-origin: bottom center;
+    transition: all 1s linear;
     overflow: hidden;
     &>input{
         width: 100%;
@@ -92,38 +189,21 @@ $d-size:750px;
         height:3rem;
         border-radius: 50%;
 //      background:rgba();
-transition: all 1s linear;
+        transition: all 1s linear;
         
     }
 }
 .tuichu_active{
-    transform: rotate(720deg) scale(1);
+    height:100%;
     opacity: 1;
-//  border-radius: 0;
-//  width: 100%;
-//  height: 667px;
 }
-.header1{
-    width: 1rem;
-    height: 1rem;
-    line-height: 1rem;
-    position: relative;
-    background: red;
-    border-radius: 50%;
-    margin: {
-        top: 185px;
-        left: 242px;
-    };
-}
+
 .ul{
     margin: {
         top: 40px;
     };
    
-//  border: 1px solid #ECECEC;;
-//  margin: {
-//      top: -6px;
-//  };
+
     li{
         width: 7rem;
         margin: 0 auto;
@@ -168,12 +248,10 @@ transition: all 1s linear;
     
     li:last-child{
         border: 1px solid #ECECEC;
-//      border-top: 0;
         border-radius:0 0 10px 10px;
     }
     li:first-child{
         border: 1px solid #ECECEC;
-//      border-top: 0;
         border-radius:10px 10px 0 0;
     }
 }
@@ -199,41 +277,6 @@ li.done{
     100%{transform:translateX(150%)};
 }
 
-
-//foot
-.footer{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height:1rem;
-    text-align: center;
-    line-height: 1rem;
-    background: rgba(255,255,255,0.3);
-//  display: none;
-    div{
-        width: 25%;
-        float: left;
-        line-height:.6rem;
-        border-left: 1px dashed #ECECEC;
-        cursor: pointer;
-        color: #fff;
-        font-weight: 700;
-        padding: .2rem;
-    }
-    .all{
-        border-left: 0;
-    }
-}
-//ding
-//.ding{
-//  width: 100%;
-//  height: .4rem;
-//  background: url(../img/ding.png);
-//  background-repeat: no-repeat;
-//  background-size: cover;
-//  background-position: 0 3px;
-//}
 .yemian{
     width: 100%;
     height:100%;
@@ -241,12 +284,24 @@ li.done{
     left: 0;
     top:0;
     z-index: 10;
+    background: url(../img/0102f656fd025932f875a94463b5ff.png@900w_1l_2o_100sh.jpg);
+    background-size: cover;
     transition: all 1s linear;
     transform-origin: center bottom;
 //  display: none;
     overflow: hidden;
-    img{
-        width: 100%;
+    h1{
+        font-size: 52px;
+        text-align: center;
+        color: #fff;
+        word-spacing:8px; 
+        letter-spacing: 40px;
+        text-transform: uppercase;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 144px;
+        margin: auto;
     }
     .ye_wei{
         position: absolute;
@@ -263,12 +318,6 @@ li.done{
             height: 100%;
             background:transparent;
             border-radius: 50%;
-//          text-align: center;
-//          line-height: 89px;
-//          color: blue;
-//          font-size: 20px;
-//          font-family: "微软雅黑";
-//          font-weight: bolder;
             border: 8px solid rgba(255,255,255,0.3);
             transition: all 1s linear;
             padding: 0.2rem;
@@ -282,9 +331,6 @@ li.done{
         }
     }
 }
-//.ye_active{
-// padding: 0;
-//}
 .ye_hidden{
     opacity: 0;
     transform:scale(0);
